@@ -4,7 +4,7 @@ MAINTAINER Juji <him@jujiyangasli.com>
 
 # install latex packages
 RUN apt-get update -y \
-  && apt-get install -y -o Acquire::Retries=10 --no-install-recommends \
+  && apt-get install -y --no-install-recommends \
     texlive-latex-base \
     texlive-xetex latex-xcolor \
     texlive-math-extra \
@@ -20,8 +20,7 @@ RUN apt-get update -y \
 # RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
 # RUN apt-get install -y ttf-mscorefonts-installer
 
-# will ease up the update process
-# updating this env variable will trigger the automatic build of the Docker image
+# env for installs
 ENV PANDOC_VERSION "1.19.2.1"
 ENV NODE_MAJOR_VERSION "6"
 

@@ -12,14 +12,13 @@ RUN apt-get update -y \
     texlive-fonts-extra \
     texlive-bibtex-extra \
     fontconfig \
-    lmodern
+    lmodern \
+    curl \
+    fonts-liberation
 
 # install ms corefonts
 # RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
 # RUN apt-get install -y ttf-mscorefonts-installer
-
-# install liberation fonts
-RUN apt-get install fonts-liberation
 
 # will ease up the update process
 # updating this env variable will trigger the automatic build of the Docker image

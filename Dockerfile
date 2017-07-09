@@ -23,11 +23,11 @@ RUN apt-get update -y \
 # will ease up the update process
 # updating this env variable will trigger the automatic build of the Docker image
 ENV PANDOC_VERSION "1.19.2.1"
+ENV NODE_MAJOR_VERSION "6"
 
 # install pandoc
 RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
 
 # install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_${NODE_MAJOR_VERSION}.x | bash -
 RUN apt-get install -y nodejs
-

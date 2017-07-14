@@ -14,6 +14,7 @@ RUN apt-get update -y \
     fontconfig \
     lmodern \
     curl \
+    jq \
     fonts-liberation
 
 # install ms corefonts
